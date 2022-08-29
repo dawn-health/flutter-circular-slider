@@ -5,21 +5,21 @@ import 'package:flutter/material.dart';
 import 'utils.dart';
 
 class BasePainter extends CustomPainter {
-  late Color baseColor;
-  late Color selectionColor;
-  late int primarySectors;
-  late int secondarySectors;
-  late double sliderStrokeWidth;
+  Color baseColor;
+  Color selectionColor;
+  int primarySectors;
+  int secondarySectors;
+  double sliderStrokeWidth;
 
-  late Offset center;
-  late double radius;
+  Offset center;
+  double radius;
 
   BasePainter({
-    required this.baseColor,
-    required this.selectionColor,
-    required this.primarySectors,
-    required this.secondarySectors,
-    required this.sliderStrokeWidth,
+    @required this.baseColor,
+    @required this.selectionColor,
+    @required this.primarySectors,
+    @required this.secondarySectors,
+    @required this.sliderStrokeWidth,
   });
 
   @override
@@ -63,7 +63,7 @@ class BasePainter extends CustomPainter {
     }
   }
 
-  Paint _getPaint({required Color color, double? width, PaintingStyle? style}) =>
+  Paint _getPaint({@required Color color, double width, PaintingStyle style}) =>
       Paint()
         ..color = color
         ..strokeCap = StrokeCap.round
